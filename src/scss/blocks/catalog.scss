@@ -1,0 +1,32 @@
+.catalog {
+	margin-top: 94px;
+	margin-bottom: 114px;
+	&__title {
+		text-align: center;
+		margin-bottom: 55px;
+	}
+}
+@media (max-width: 1200px) {
+	.catalog {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		&__title {
+			margin-bottom: 32px;
+		}
+	}
+}
+@media (max-width: 1010px) {
+	.catalog {
+		margin-top: 80px;
+		margin-bottom: 80px;
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}
+@media (max-width: 760px) {
+	.catalog {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+}
