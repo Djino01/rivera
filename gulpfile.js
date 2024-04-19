@@ -44,6 +44,7 @@ const stylesLibs = () => {
       'node_modules/swiper/swiper-bundle.min.css',
 	  'node_modules/slick-slider/slick/slick.css',
 	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+	  'node_modules/splitting/dist/splitting.css',
     ])
     .pipe(concat('libs.css'))
     .pipe(dest('docs/css'))
@@ -59,8 +60,11 @@ const scriptsLibs = () => {
 	  'node_modules/jquery/dist/jquery.min.js',
       'node_modules/swiper/swiper-bundle.min.js',
       'node_modules/gsap/dist/gsap.min.js',
+	  'node_modules/gsap/dist/ScrollTrigger.min.js',
 	  'node_modules/slick-slider/slick/slick.js',
 	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+	  'node_modules/vanilla-tilt/dist/vanilla-tilt.js',
+	  'node_modules/splitting/dist/splitting.js',
 	  'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     ])
     .pipe(concat('libs.js'))
