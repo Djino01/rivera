@@ -1,0 +1,103 @@
+.form {
+	&__body {
+		margin-top: 32px;
+	}
+	&__label {
+		position: relative;
+		display: block;
+		& + & {
+			margin-top: 24px;
+		}
+	}
+	&__error {
+		position: absolute;
+		width: 100%;
+		left: 0px;
+		bottom: -15px;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 120%;
+		text-align: left;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #e12222;
+		opacity: 0;
+		transition: all 0.3s;
+		&.visible {
+			opacity: 1;
+			transition: all 0.3s;
+		}
+	}
+	&__bottom {
+		margin-top: 32px;
+	}
+	&__btn {
+		width: 100%;
+	}
+	&__agreement {
+		font-size: 12px;
+		line-height: 120%;
+		color: #6e7687;
+		margin-top: 16px;
+	}
+}
+@media (max-width: 1590px) {
+}
+@media (max-width: 1430px) {
+}
+@media (max-width: 1320px) {
+	.form {
+		&__body {
+			margin-top: 24px;
+		}
+		&__bottom {
+			margin-top: 24px;
+		}
+		&__buttons {
+			flex-wrap: wrap;
+		}
+		&__btn {
+			& + & {
+				margin-top: 8px;
+			}
+		}
+		.btn-item {
+			padding: 15px;
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 1010px) {
+}
+@media (max-width: 760px) {
+	.form {
+		&__title {
+			letter-spacing: -0.65px;
+		}
+		/*&__body {
+			margin-top: 46px;
+		}*/
+		&__label {
+			& + & {
+				margin-top: 22px;
+			}
+		}
+		&-select {
+			&-title {
+				font-size: 15px;
+				line-height: 120%;
+			}
+			&-options {
+				&__value {
+					padding: 6px 12px;
+					font-size: 14px;
+					line-height: 140%;
+				}
+			}
+		}
+		&--item {
+			width: 100%;
+			padding: 0;
+		}
+	}
+}

@@ -100,7 +100,7 @@
 					</div>
 					<div class="header__contacts-box">
 						<a href="tel:+7 918 303 2222" class="header__tel">+7 918 303 2222</a>
-						<button class="header__btn">Обратный звонок</button>
+						<button class="header__btn callback--js">Обратный звонок</button>
 					</div>
 				</div>
 			</div>
@@ -1041,7 +1041,8 @@
 						</div>
 						<div class="reviews-card__date">Январь 2024</div>
 					</div>
-					<a href="#" class="reviews-video js-tilt" data-tilt data-tilt-scale="1.02">
+					<a href="https://www.youtube.com/watch?v=qMXESlny4-I" class="reviews-video js-tilt"
+						data-fancybox="video" data-tilt data-tilt-scale="1.02">
 						<div class="reviews-video__img cover">
 							<img src="img/reviews/img-1.jpg" alt="">
 						</div>
@@ -1109,7 +1110,8 @@
 					</div>
 				</div>
 				<div class="reviews__coll">
-					<a href="#" class="reviews-video js-tilt" data-tilt data-tilt-scale="1.02">
+					<a href="https://www.youtube.com/watch?v=qMXESlny4-I" class="reviews-video js-tilt"
+						data-fancybox="video" data-tilt data-tilt-scale="1.02">
 						<div class="reviews-video__img cover">
 							<img src="img/reviews/img-2.jpg" alt="">
 						</div>
@@ -1370,7 +1372,7 @@
 				<img src="img/contacts/mail.svg" alt="">
 			</a>
 		</div>
-		<button class="contacts__btn btn">Заказать обратный звонок</button>
+		<button class="contacts__btn btn callback--js">Заказать обратный звонок</button>
 	</div>
 </section>
 
@@ -1517,6 +1519,36 @@
 		</div>
 	</div>
 </footer>
+
+<div id="callback-modal" class="callback-modal modal" style="display: none;">
+	<div class="modal__closed svg-contain" data-fancybox-close>
+		<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M8 8L24 24" stroke="#221f32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M24 8L8 24" stroke="#221f32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</div>
+	<div class="callback-modal__body">
+		<form action="" method="get" class="form">
+			<div class="form__title title">Давайте обсудим детали</div>
+			<div class="form__body">
+				<label class="form__label">
+					<input type="text" name="name" class="form__filed field form__required" placeholder="Введите имя">
+					<div class="form__error">Поле обязательно для заполнения</div>
+				</label>
+				<label class="form__label">
+					<input type="text" name="phone" class="form__filed field form__required phone-mask"
+						placeholder="Номер телефона">
+					<div class="form__error">Поле обязательно для заполнения</div>
+				</label>
+			</div>
+			<div class="form__bottom">
+				<button class="form__btn btn" type="submit">отправить</button>
+				<div class="form__agreement">Отправляя эту форму, вы подтверждаете свое согласие на обработку
+					персональных данных</div>
+			</div>
+		</form>
+	</div>
+</div><!-- end callback-modal -->
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=642edf7f-66f8-4439-b5ba-264086510da3&lang=ru_RU"
 	type="text/javascript"></script>

@@ -1,0 +1,29 @@
+<div id="callback-modal" class="callback-modal modal" style="display: none;">
+	<div class="modal__closed svg-contain" data-fancybox-close>
+		<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M8 8L24 24" stroke="#221f32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			<path d="M24 8L8 24" stroke="#221f32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</div>
+	<div class="callback-modal__body">
+		<form action="" method="get" class="form">
+			<div class="form__title title">Давайте обсудим детали</div>
+			<div class="form__body">
+				<label class="form__label">
+					<input type="text" name="name" class="form__filed field form__required" placeholder="Введите имя">
+					<div class="form__error">Поле обязательно для заполнения</div>
+				</label>
+				<label class="form__label">
+					<input type="text" name="phone" class="form__filed field form__required phone-mask"
+						placeholder="Номер телефона">
+					<div class="form__error">Поле обязательно для заполнения</div>
+				</label>
+			</div>
+			<div class="form__bottom">
+				<button class="form__btn btn" type="submit">отправить</button>
+				<div class="form__agreement">Отправляя эту форму, вы подтверждаете свое согласие на обработку
+					персональных данных</div>
+			</div>
+		</form>
+	</div>
+</div><!-- end callback-modal -->
