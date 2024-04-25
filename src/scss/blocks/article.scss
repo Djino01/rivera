@@ -1,0 +1,258 @@
+.article {
+	margin-top: 30px;
+	margin-bottom: 100px;
+	&-top {
+		height: 428px;
+		position: relative;
+		margin-bottom: 40px;
+		&__bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 10px;
+			overflow: hidden;
+			z-index: 1;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 295px;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+				opacity: 0.68;
+				left: 0;
+				bottom: 0;
+				z-index: 4;
+			}
+		}
+		&__wrap {
+			position: relative;
+			z-index: 8;
+			padding: 50px 15px;
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+		}
+		&__body {
+			max-width: 680px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		&__items {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			margin-bottom: 20px;
+		}
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 16px;
+			line-height: 1;
+			color: #fff;
+		}
+		&__title {
+			color: #fff;
+		}
+	}
+	&-text {
+		max-width: 680px;
+		width: 100%;
+		margin: 0 auto;
+		counter-reset: myCounter;
+		.text-big {
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 139%;
+			color: var(--text);
+			margin-bottom: 30px;
+			strong {
+				font-weight: 500;
+			}
+		}
+		p {
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 167%;
+			color: var(--text);
+		}
+		p + p {
+			margin-top: 24px;
+		}
+		p + h2,
+		p + h3,
+		p + h4,
+		p + h5,
+		p + h6 {
+			margin-top: 24px;
+		}
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			position: relative;
+			font-weight: 500;
+			font-size: 18px;
+			color: var(--text);
+			padding-left: 30px;
+			margin-bottom: 20px;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 22px;
+				height: 22px;
+				left: 0px;
+				top: 0px;
+				border-radius: 100%;
+				background-color: #236cae;
+				counter-increment: myCounter;
+				content: counter(myCounter);
+				font-weight: 600;
+				font-size: 13px;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		blockquote {
+			position: relative;
+			background: rgba(35, 108, 174, 0.1);
+			border-left: 2px solid var(--base-2);
+			padding: 22px 65px 22px 37px;
+			margin: 30px -65px 30px -37px;
+			p {
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 120%;
+			}
+		}
+	}
+	.filter {
+		margin-top: 85px;
+	}
+}
+.video {
+	width: 100%;
+	position: relative;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	&__bg {
+		border-radius: 10px;
+		overflow: hidden;
+		background: #000;
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		img {
+			width: 100%;
+			object-fit: cover;
+			opacity: 0.45;
+		}
+	}
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s;
+		&:hover {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.article {
+		&-top {
+			height: 360px;
+			&__wrap {
+				padding: 32px 15px;
+			}
+		}
+		.filter {
+			margin-top: 50px;
+		}
+	}
+}
+@media (max-width: 1010px) {
+	.article {
+		margin-bottom: 80px;
+		&-top {
+			height: 280px;
+		}
+		.filter {
+			margin-top: 32px;
+		}
+	}
+}
+@media (max-width: 760px) {
+	.article {
+		margin-bottom: 60px;
+		&-top {
+			height: 200px;
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: 24px;
+			&__bg {
+				border-radius: 0px;
+			}
+			&__wrap {
+				padding: 20px 15px;
+			}
+			&__item {
+				gap: 8px;
+				font-size: 14px;
+			}
+		}
+		&-text {
+			.text-big {
+				font-size: 16px;
+				line-height: 130%;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 140%;
+			}
+			p + p {
+				margin-top: 16px;
+			}
+			p + h2,
+			p + h3,
+			p + h4,
+			p + h5,
+			p + h6 {
+				margin-top: 16px;
+			}
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				padding-left: 28px;
+				margin-bottom: 16px;
+				&::before {
+					top: -3px;
+				}
+			}
+			blockquote {
+				padding: 22px 25px;
+				margin: 16px -25px;
+				p {
+					font-size: 16px;
+					line-height: 120%;
+				}
+			}
+		}
+		.filter {
+			margin-top: 24px;
+		}
+	}
+}

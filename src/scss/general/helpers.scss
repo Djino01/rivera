@@ -31,6 +31,14 @@
 	}
 }
 
+.page-top {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	& + .contacts {
+		margin-top: 75px;
+	}
+}
+
 .btn {
 	font-family: "Gilroy", sans-serif;
 	display: inline-flex;
@@ -61,6 +69,16 @@
 		&:hover {
 			background-color: #013f7c;
 			border-color: #013f7c;
+			color: #fff;
+		}
+	}
+	&_blue {
+		border-color: rgba(196, 213, 228, 0);
+		background: rgba(196, 213, 228, 0.43);
+		color: var(--base-1);
+		&:hover {
+			border-color: rgba(196, 213, 228, 0);
+			background-color: #013f7c;
 			color: #fff;
 		}
 	}
@@ -189,6 +207,48 @@
 	height: 505px;
 }
 
+.breadcrumbs {
+	margin-bottom: 30px;
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		li {
+			display: inline-flex;
+			align-items: center;
+			height: 27px;
+			font-weight: 500;
+			border-radius: 9px;
+			padding: 2px 9px;
+			font-size: 15px;
+			line-height: 150%;
+			letter-spacing: 0.01em;
+			color: rgba(34, 31, 50, 0.37);
+			background-color: #fff;
+			a {
+				min-width: max-content;
+				display: inline-flex;
+				align-items: center;
+				height: 27px;
+				gap: 4px;
+				font-weight: 600;
+				font-size: 15px;
+				line-height: 150%;
+				letter-spacing: 0.01em;
+				color: var(--base-2);
+				background: rgba(35, 108, 174, 0.16);
+				border-radius: 9px;
+				padding: 2px 9px;
+				margin: -2px -9px;
+				transition: background 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+				&:hover {
+					background: rgba(35, 108, 174, 0);
+				}
+			}
+		}
+	}
+}
+
 .arrow {
 	width: 24px;
 	height: 24px;
@@ -223,16 +283,33 @@
 	}
 }
 @media (max-width: 1010px) {
+	.page-top {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		& + .contacts {
+			margin-top: 50px;
+		}
+	}
 	.wrapper {
 		max-width: 750px;
 	}
 	.btn {
 		padding: 16px 48px;
 	}
+	.breadcrumbs {
+		margin-bottom: 24px;
+	}
 }
 @media (max-width: 760px) {
 	.logo {
 		width: 120px;
+	}
+	.page-top {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		& + .contacts {
+			margin-top: 24px;
+		}
 	}
 	.btn {
 		padding: 12px 32px;
@@ -245,6 +322,31 @@
 		&__text {
 			font-size: 14px;
 			line-height: 120%;
+		}
+	}
+	.breadcrumbs {
+		margin-bottom: 10px;
+		padding-bottom: 5px;
+		overflow: auto;
+		ul {
+			gap: 4px;
+			li {
+				height: 24px;
+				border-radius: 6px;
+				padding: 2px 5px;
+				font-size: 13px;
+				line-height: 140%;
+				white-space: nowrap;
+				a {
+					height: 24px;
+					border-radius: 6px;
+					padding: 2px 5px;
+					font-size: 13px;
+					line-height: 140%;
+					margin: -2px -5px;
+					white-space: nowrap;
+				}
+			}
 		}
 	}
 	#map {
