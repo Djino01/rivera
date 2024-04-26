@@ -65,6 +65,7 @@ const scriptsLibs = () => {
 	  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 	  'node_modules/vanilla-tilt/dist/vanilla-tilt.js',
 	  'node_modules/splitting/dist/splitting.js',
+	  'node_modules/sticky-js/dist/sticky.min.js',
 	  'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     ])
     .pipe(concat('libs.js'))
