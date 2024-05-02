@@ -63,14 +63,15 @@
 		letter-spacing: -0.03em;
 		text-transform: uppercase;
 		position: absolute;
-		top: -325px;
+		bottom: calc(100% + 49px);
 		left: 0;
 		max-width: 503px;
 		background-color: #f4f5f5;
 		padding-left: 48px;
-		height: 295px;
+		padding-top: 32px;
 		display: flex;
 		align-items: flex-end;
+		min-width: 500px;
 	}
 	&__desc {
 		max-width: 533px;
@@ -244,11 +245,10 @@
 		}
 		&__title {
 			font-size: 72px;
-			top: -270px;
+			bottom: calc(100% + 29px);
 			left: 0;
 			padding-left: 20px;
 			padding-right: 30px;
-			height: 240px;
 		}
 		&__desc {
 			max-width: 100%;
@@ -297,10 +297,8 @@
 		}
 		&__title {
 			font-size: 64px;
-			top: -230px;
 			padding-left: 20px;
 			padding-right: 50px;
-			height: 200px;
 		}
 		&__right {
 			width: 100%;
@@ -330,9 +328,10 @@
 			height: 360px;
 		}
 		&__title {
+			min-width: 100%;
 			font-size: 48px;
-			top: -160px;
-			height: 140px;
+			bottom: calc(100% + 19px);
+			padding-top: 24px;
 		}
 		&__desc {
 			margin-top: 20px;
