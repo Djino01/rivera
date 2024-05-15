@@ -1,18 +1,30 @@
 .header {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 1000;
 	padding: 13px 0px;
+	transition: all 0.3s;
+	&.fixed {
+		background-color: #013f7c;
+	}
 	&__body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
+	}
+	&__first {
+		width: 38%;
+	}
+	&__container {
+		position: relative;
+		left: 28px;
 	}
 	&__menu {
 		ul {
-			display: flex;
+			display: inline-flex;
 			gap: 53px;
 			padding-bottom: 15px;
 			border-bottom: 2px solid rgba(237, 237, 245, 0.25);
@@ -46,7 +58,9 @@
 		}
 	}
 	&__last {
+		width: 43%;
 		display: flex;
+		justify-content: flex-end;
 		gap: 40px;
 		position: relative;
 		top: 4px;
@@ -164,6 +178,9 @@
 				}
 			}
 		}
+		&__container {
+			left: 20px;
+		}
 		&__last {
 			gap: 24px;
 			top: 5px;
@@ -182,6 +199,9 @@
 @media (max-width: 1010px) {
 	.header {
 		padding: 10px 0;
+		&__first {
+			width: 0;
+		}
 		&__container {
 			width: 100%;
 			display: flex;
@@ -189,6 +209,9 @@
 			justify-content: space-between;
 			position: relative;
 			z-index: 999;
+		}
+		&__container {
+			left: 0px;
 		}
 		&__burger {
 			display: flex;

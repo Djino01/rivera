@@ -19,6 +19,20 @@
 			border-radius: 10px;
 		}
 	}
+	&--fixed {
+		position: absolute;
+		width: 100%;
+		transition: all 0.3s ease;
+		&.under-header {
+			background-color: #013f7c;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+			margin-top: 0px;
+			padding-bottom: 35px;
+		}
+	}
 }
 @media (max-width: 1200px) {
 }
@@ -32,6 +46,9 @@
 			img {
 				border-radius: 5px;
 			}
+		}
+		&--fixed {
+			position: relative;
 		}
 	}
 }

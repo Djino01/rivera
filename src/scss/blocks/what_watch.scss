@@ -1,0 +1,143 @@
+.what_watch {
+	background-color: #f0f0f0;
+	position: relative;
+	overflow: hidden;
+}
+
+.what_watch_back {
+	background-image: url(/wp-content/themes/hotel/img/what_watch.jpg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: 100vw;
+	display: none;
+}
+
+.what_watch_in,
+.what_watch_layer {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+}
+
+.what_watch_layer {
+	height: 346px;
+	flex-direction: column;
+	position: relative;
+}
+
+.what_watch_layer_2 {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	-webkit-clip-path: circle(130px at 50% 50%);
+	clip-path: circle(130px at 50% 50%);
+	transition: 0.2s;
+}
+.what_watch_layer_2 .what_watch_links a {
+	color: #fff;
+}
+
+.review_item_date,
+.review_item_text_neg {
+	background-position: 5px 0;
+}
+
+.what_watch_l_text {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 145%;
+	margin-bottom: 18px;
+	position: absolute;
+	top: calc(50% - 50px);
+}
+
+.m_caro_r {
+	top: 50%;
+	z-index: 20;
+}
+
+.what_watch_links {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.what_watch_links a {
+	font-weight: 800;
+	font-size: 28px;
+	color: #282727;
+}
+
+.what_watch_layer_2 .what_watch_l_text {
+	color: silver;
+}
+
+.review_item_date,
+.review_item_text_neg {
+	background-position: 5px 0;
+}
+
+.what_video_block {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 310px;
+	height: 310px;
+	overflow: hidden;
+	background-color: #8e82c2;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	transition: 0.2s;
+	transform: translate(-910px, -910px);
+}
+
+.what_video_item video {
+	max-width: 180%;
+	min-width: 180%;
+	transform: translate(-40%, 0);
+}
+
+.what_watch_link_item {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Kelson Sans RU", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 145%;
+	text-transform: uppercase;
+	color: #221f32;
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 1010px) {
+}
+@media (max-width: 760px) {
+	.what_watch_layer {
+		height: unset;
+		padding: 34px 0;
+	}
+	.what_watch_links {
+		flex-direction: column;
+		text-align: center;
+	}
+	.what_watch_l_text {
+		margin-bottom: 10px;
+		position: static;
+		margin-top: 10px;
+	}
+	.what_watch_links a {
+		font-size: 25px;
+		margin: 15px;
+	}
+}

@@ -1,5 +1,12 @@
 .about {
 	padding-bottom: 127px;
+	&-wrap {
+		padding-top: 70px;
+		padding-bottom: 70px;
+		&__title {
+			text-align: center;
+		}
+	}
 	&-top {
 		height: 778px;
 		.slick-list,
@@ -324,6 +331,10 @@
 @media (max-width: 760px) {
 	.about {
 		padding-bottom: 60px;
+		&-wrap {
+			padding-top: 32px;
+			padding-bottom: 24px;
+		}
 		&-top {
 			height: 360px;
 		}
@@ -338,6 +349,9 @@
 		}
 		&__right {
 			padding-top: 20px;
+			&-img {
+				height: auto;
+			}
 		}
 		&__row {
 			grid-template-columns: repeat(2, 1fr);
